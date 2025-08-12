@@ -3,64 +3,88 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #26102e; /* لون قائمة السؤال الجديد */
-    font-family: Arial, sans-serif;
-    color: #fff;
+    background-color: #3b2f27; /* لون خلفية داكن جداً */
+    font-family: 'Times New Roman', serif;
+    color: #e0d5be; /* لون نص فاتح لضمان سهولة القراءة */
     text-align: center;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 .safe-container {
-    background-color: #093e58; /* لون الفريق 1 */
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #4a3c30; /* لون أفتح للخزنة لإعطاء تباين */
+    padding: 30px;
+    border: 2px solid #6b5c4e; /* إطار بني باهت */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
     width: 90%;
-    max-width: 500px;
-    border: 5px solid #681212; /* لون الفريق 2 */
+    max-width: 600px;
 }
 
 h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3em;
+    font-weight: bold;
     margin-bottom: 20px;
-    color: #ffd700; /* لون ذهبي */
+    text-transform: uppercase;
+    border-bottom: 2px solid #6b5c4e;
+    padding-bottom: 10px;
+    color: #e0d5be; /* لون فاتح للعنوان */
+}
+
+h1::before,
+h1::after {
+    content: "•";
+    color: #6b5c4e;
+    margin: 0 10px;
 }
 
 .input-area {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed #6b5c4e;
 }
 
 #code-input {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 200px;
+    padding: 12px;
+    border: 1px solid #6b5c4e;
+    background-color: #fffaf0; /* خلفية أفتح لخانة الإدخال */
+    width: 250px;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    color: #3b2f27;
 }
 
 #open-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #681212; /* لون الفريق 2 */
-    color: #fff;
+    padding: 10px 25px;
+    border: 1px solid #e0d5be;
+    background-color: #6b5c4e; /* لون الزر بني باهت */
+    color: #e0d5be;
     cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
     transition: background-color 0.3s;
 }
 
 #open-button:hover {
-    background-color: #8a1717;
+    background-color: #8c7f73;
 }
 
 .result-display {
-    min-height: 50px;
-    padding: 10px;
-    background-color: #26102e; /* لون قائمة السؤال الجديد */
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 80px;
+    padding: 20px;
+    margin-top: 25px;
+    background-color: #fffaf0; /* خلفية أفتح لعرض النتائج */
+    border: 1px solid #6b5c4e;
     font-size: 1.2em;
-    font-weight: bold;
-    word-break: break-all;
+    font-weight: normal;
+    text-align: justify;
+    color: #3b2f27;
+    border-left: 2px solid #6b5c4e;
+    border-right: 2px solid #6b5c4e;
 }
