@@ -28,7 +28,6 @@ function getCurrentFormattedTime() {
 function checkCode() {
     const inputCode = document.getElementById('code-input').value;
     const resultDisplay = document.getElementById('result-display');
-    const timeInSeconds = getCurrentFormattedTime(); // يمكن استخدامها في أي من الرموز إذا أردت
 
     if (inputCode === 'y41') {
         const formattedTime = getCurrentFormattedTime();
@@ -36,24 +35,21 @@ function checkCode() {
         resultDisplay.style.color = '#e0d5be';
         resultDisplay.style.backgroundColor = '#4a3c30';
     } else if (inputCode === 'انا محاصر') {
-        // إذا كان الرمز '123'، يظهر رابط تحميل ملف PDF
-        const fileName = "C:\Users\samer\Downloads\فعالية الشفرة\men-on-sun.pdf"; // استبدل هذا باسم ملفك
+        const fileName = 'men-on-sun.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
-            <a href="${fileName}" download style="color: #e0d5be; text-decoration: underline;">
+            <a href="${fileName}" download target="_blank" style="color: #e0d5be; text-decoration: underline;">
                 اضغط هنا لتحميل ملف PDF
             </a>
         `;
         resultDisplay.style.color = '#e0d5be';
         resultDisplay.style.backgroundColor = '#4a3c30';
     } else if (codes[inputCode]) {
-        // إذا كان الرمز صحيحاً (غير y41 أو 123)
         resultDisplay.textContent = codes[inputCode];
         resultDisplay.style.color = '#e0d5be';
         resultDisplay.style.backgroundColor = '#4a3c30';
     } else {
-        // إذا كان الرمز خاطئاً
         resultDisplay.textContent = 'الرمز خاطئ. حاول مرة أخرى.';
         resultDisplay.style.color = '#e0d5be';
         resultDisplay.style.backgroundColor = '#3b2f27';
