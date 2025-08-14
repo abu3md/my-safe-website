@@ -53,6 +53,15 @@ function checkCode() {
                 اضغط هنا لتحميل ملف PDF
             </a>
         `;
+    } else if (inputCode === 'للل') {
+        const fileName = 'code.png';
+        resultDisplay.innerHTML = `
+            ${codes[inputCode]}
+            <br><br>
+            <a href="${fileName}" download target="_blank" style="color: #e0d5be; text-decoration: underline;">
+                اضغط هنا لتحميل ملف PDF
+            </a>
+        `;
         resultDisplay.style.color = '#e0d5be';
         resultDisplay.style.backgroundColor = '#4a3c30';
     } else if (codes[inputCode]) {
