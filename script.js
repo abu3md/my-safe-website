@@ -8,7 +8,7 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
 const codes = {
     'ASXPWE': '.... . .-.. .--.',
     'help': 'هناك طريقة بترتيب التواريخ و الأوراق المبعذرة لايجاد ارقام و تحويل الأرقام الى احرف مثلا 3=ت 12=س',
-    'وقود يحترق': 'اطلب المنظم التلميح التالي',
+    'وقود يحترق': 'تهانينا! الرمز صحيح. يمكنك تحميل الصورة الآن.',
     'y41': 'تهانينا! لقد فزت في اللعبة!',
     'انا محاصر': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
 };
@@ -53,13 +53,13 @@ function checkCode() {
                 اضغط هنا لتحميل ملف PDF
             </a>
         `;
-    } else if (inputCode === 'للل') {
+    } else if (inputCode === 'وقود يحترق') {
         const fileName = 'code.png';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
             <a href="${fileName}" download target="_blank" style="color: #e0d5be; text-decoration: underline;">
-                اضغط هنا لتحميل ملف PDF
+                اضغط هنا لتحميل ملف الصورة
             </a>
         `;
         resultDisplay.style.color = '#e0d5be';
