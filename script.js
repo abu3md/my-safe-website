@@ -6,11 +6,13 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
 });
 
 const codes = {
-    'ASXPWE': '.... . .-.. .--.',
-    'help': 'هناك طريقة بترتيب التواريخ و الأوراق المبعذرة لايجاد ارقام و تحويل الأرقام الى احرف مثلا 3=ت 12=س',
-    'وقود يحترق': 'تهانينا! الرمز صحيح. يمكنك تحميل الصورة الآن.',
-    'y41': 'تهانينا! لقد فزت في اللعبة!',
-    'انا محاصر': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+    'تلميح': 'تفضل الصورة',
+    'قبو': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+    'KDXUA4BN': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+    'ليلى': 'تهانينا! لقد فزت في اللعبة!',
+    'خاين': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+    '12': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+
 };
 
 function getCurrentFormattedTime() {
@@ -29,7 +31,7 @@ function checkCode() {
     const inputCode = document.getElementById('code-input').value;
     const resultDisplay = document.getElementById('result-display');
 
-    if (inputCode === 'y41') {
+    if (inputCode === 'ليلى') {
         const formattedTime = getCurrentFormattedTime();
         resultDisplay.innerHTML = `**تهانينا! لقد فزت في اللعبة!**<br><br>الوقت الحالي هو: ${formattedTime}`;
         resultDisplay.style.color = '#e0d5be';
@@ -44,7 +46,7 @@ function checkCode() {
             </a>
         `;
         resultDisplay.style.color = '#e0d5be';
-    } else if (inputCode === 'مذكرات') {
+    } else if (inputCode === 'قبو') {
         const fileName = 'nots.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
@@ -53,8 +55,35 @@ function checkCode() {
                 اضغط هنا لتحميل ملف PDF
             </a>
         `;
-    } else if (inputCode === 'وقود يحترق') {
-        const fileName = 'code.png';
+    } else if (inputCode === 'KDXUA4BN') {
+        const fileName = 'nots.pdf';
+        resultDisplay.innerHTML = `
+            ${codes[inputCode]}
+            <br><br>
+            <a href="${fileName}" download target="_blank" style="color: #e0d5be; text-decoration: underline;">
+                اضغط هنا لتحميل ملف PDF
+            </a>
+        `;
+    } else if (inputCode === 'خائن') {
+        const fileName = 'nots.pdf';
+        resultDisplay.innerHTML = `
+            ${codes[inputCode]}
+            <br><br>
+            <a href="${fileName}" download target="_blank" style="color: #e0d5be; text-decoration: underline;">
+                اضغط هنا لتحميل ملف PDF
+            </a>
+        `;
+    } else if (inputCode === '12') {
+        const fileName = 'nots.pdf';
+        resultDisplay.innerHTML = `
+            ${codes[inputCode]}
+            <br><br>
+            <a href="${fileName}" download target="_blank" style="color: #e0d5be; text-decoration: underline;">
+                اضغط هنا لتحميل ملف PDF
+            </a>
+        `;
+    } else if (inputCode === 'تلميح') {
+        const fileName = '1.png';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
