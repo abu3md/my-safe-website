@@ -47,7 +47,7 @@ function checkCode() {
         `;
         resultDisplay.style.color = '#e0d5be';
     } else if (inputCode === 'قبو') {
-        const fileName = 'nots.pdf';
+        const fileName = 'after_8bo.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -56,7 +56,7 @@ function checkCode() {
             </a>
         `;
     } else if (inputCode === 'KDXUA4BN') {
-        const fileName = 'nots.pdf';
+        const fileName = 'after_code.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -65,7 +65,7 @@ function checkCode() {
             </a>
         `;
     } else if (inputCode === 'خائن') {
-        const fileName = 'nots.pdf';
+        const fileName = 'after_5ayn.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -74,7 +74,7 @@ function checkCode() {
             </a>
         `;
     } else if (inputCode === '12') {
-        const fileName = 'nots.pdf';
+        const fileName = 'last.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
