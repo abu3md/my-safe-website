@@ -8,7 +8,7 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
 const codes = {
     'تلميح': 'تفضل الصورة',
     'قبو': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-    'KDXUA4BN': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+    'SECRET': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
     'ليلى': 'تهانينا! لقد فزت في اللعبة!',
     'خائن': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
     '12': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
@@ -48,7 +48,7 @@ function checkCode() {
         return; // منع أي إجراءات أخرى
     }
 
-    if (inputCode === 'ليلى') {
+    if (inputCode === 'عادل') {
         const formattedTime = getCurrentFormattedTime();
         resultDisplay.innerHTML = `**تهانينا! لقد فزت في اللعبة!**<br><br>الوقت الحالي هو: ${formattedTime}`;
         resultDisplay.style.color = '#f0f0f0';
@@ -64,8 +64,8 @@ function checkCode() {
         `;
         resultDisplay.style.color = '#f0f0f0';
         resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'قبو') {
-        const fileName = 'after_8bo.pdf';
+    } else if (inputCode === 'SECRET') {
+        const fileName = 'crime2.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -75,8 +75,8 @@ function checkCode() {
         `;
         resultDisplay.style.color = '#f0f0f0';
         resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'KDXUA4BN') {
-        const fileName = 'after_code.pdf';
+    } else if (inputCode === 'START') {
+        const fileName = 'crime1.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -86,8 +86,8 @@ function checkCode() {
         `;
         resultDisplay.style.color = '#f0f0f0';
         resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'خائن') {
-        const fileName = 'after_5ayn.pdf';
+    } else if (inputCode === '312') {
+        const fileName = 'crime3.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -97,8 +97,8 @@ function checkCode() {
         `;
         resultDisplay.style.color = '#f0f0f0';
         resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === '12') {
-        const fileName = 'last.pdf';
+    } else if (inputCode === 'سكين') {
+        const fileName = 'crime4.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
@@ -109,7 +109,7 @@ function checkCode() {
         resultDisplay.style.color = '#f0f0f0';
         resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
     } else if (inputCode === 'تلميح') {
-        const fileName = '1.png';
+        const fileName = '1.pdf';
         resultDisplay.innerHTML = `
             ${codes[inputCode]}
             <br><br>
