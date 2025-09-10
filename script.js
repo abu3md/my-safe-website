@@ -6,14 +6,40 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
 });
 
 const codes = {
-    'تلميح': 'تفضل الصورة',
-    'قبو': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-    'SECRET': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-    'ليلى': 'تهانينا! لقد فزت في اللعبة!',
-    'خائن': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-    '12': 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-    'انا محاصر': 'تم العثور على الملف:'
-
+    '28': {
+        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        fileName: 'q7.png',
+        type: 'image'
+    },
+    '5,891': {
+        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        fileName: 'q8.png',
+        type: 'file'
+    },
+    '2004': {
+        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        fileName: 'q9.png',
+        type: 'file'
+    },
+    'RUN AWAY': {
+        message: '**تهانينا! لقد فزت في اللعبة!**',
+        type: 'win'
+    },
+    'MATH': {
+        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        fileName: 'q10.png',
+        type: 'file'
+    },
+    'تلميح': {
+        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        fileName: 'q6.png',
+        type: 'file'
+    },
+    'انا محاصر': {
+        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        fileName: 'men-on-sun.pdf',
+        type: 'file'
+    }
 };
 
 // متغيرات نظام الكولداون
@@ -48,79 +74,22 @@ function checkCode() {
         return; // منع أي إجراءات أخرى
     }
 
-    if (inputCode === 'عادل') {
-        const formattedTime = getCurrentFormattedTime();
-        resultDisplay.innerHTML = `**تهانينا! لقد فزت في اللعبة!**<br><br>الوقت الحالي هو: ${formattedTime}`;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'انا محاصر') {
-        const fileName = 'men-on-sun.pdf';
-        resultDisplay.innerHTML = `
-            ${codes[inputCode]}
-            <br><br>
-            <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                اضغط هنا لتحميل ملف PDF
-            </a>
-        `;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'SECRET') {
-        const fileName = 'crime2.pdf';
-        resultDisplay.innerHTML = `
-            ${codes[inputCode]}
-            <br><br>
-            <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                اضغط هنا لتحميل ملف PDF
-            </a>
-        `;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'START') {
-        const fileName = 'crime1.pdf';
-        resultDisplay.innerHTML = `
-            ${codes[inputCode]}
-            <br><br>
-            <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                اضغط هنا لتحميل ملف PDF
-            </a>
-        `;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === '312') {
-        const fileName = 'crime3.pdf';
-        resultDisplay.innerHTML = `
-            ${codes[inputCode]}
-            <br><br>
-            <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                اضغط هنا لتحميل ملف PDF
-            </a>
-        `;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'سكين') {
-        const fileName = 'crime4.pdf';
-        resultDisplay.innerHTML = `
-            ${codes[inputCode]}
-            <br><br>
-            <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                اضغط هنا لتحميل ملف PDF
-            </a>
-        `;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (inputCode === 'تلميح') {
-        const fileName = '1.pdf';
-        resultDisplay.innerHTML = `
-            ${codes[inputCode]}
-            <br><br>
-            <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                اضغط هنا لتحميل ملف الصورة
-            </a>
-        `;
-        resultDisplay.style.color = '#f0f0f0';
-        resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
-    } else if (codes[inputCode]) {
-        resultDisplay.textContent = codes[inputCode];
+    const codeData = codes[inputCode];
+
+    if (codeData) {
+        if (codeData.type === 'win') {
+            const formattedTime = getCurrentFormattedTime();
+            resultDisplay.innerHTML = `${codeData.message}<br><br>الوقت الحالي هو: ${formattedTime}`;
+        } else {
+            const fileName = codeData.fileName;
+            resultDisplay.innerHTML = `
+                ${codeData.message}
+                <br><br>
+                <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
+                    اضغط هنا لتحميل الملف
+                </a>
+            `;
+        }
         resultDisplay.style.color = '#f0f0f0';
         resultDisplay.style.backgroundColor = 'rgba(26, 26, 26, 0.9)';
     } else {
