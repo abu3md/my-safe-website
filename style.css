@@ -3,19 +3,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('background_pattern.png'); /* استبدل هذا باسم ملف صورتك */
-    background-repeat: repeat; /* لجعل الصورة تتكرر كنمط */
-    background-size: auto; /* للحفاظ على حجم الصورة الأصلي أو تركها تتكرر */
-    background-color: #1c1c1c; /* لون احتياطي في حال عدم تحميل الصورة */
-    font-family: 'Courier New', monospace; /* خط يشبه خطوط الآلة الكاتبة */
-    color: #f0f0f0; /* لون نص فاتح (أبيض رمادي) */
+    background-color: #3d342d; /* لون بني داكن للخلفية (خشب قديم) */
+    font-family: 'Times New Roman', serif; /* خط كلاسيكي */
+    color: #e0d5be; /* لون نص باهت (ورق قديم) */
     text-align: center;
     padding: 20px;
     line-height: 1.6;
 }
 
 .safe-container {
-    background-color: rgba(13, 13, 13, 0.8); /* أسود داكن شفاف للخزنة لكي تظهر الخلفية */
+    background-color: #2e2822; /* لون أغمق للخزنة */
     padding: 30px;
     border: 2px solid #5a5a5a; /* إطار رمادي داكن */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
@@ -24,20 +21,20 @@ body {
 }
 
 h1 {
-    font-family: 'Courier New', monospace;
+    font-family: 'Georgia', serif;
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
-    border-bottom: 2px solid #ffcc00; /* خط فاصل أصفر باهت (شريط جريمة) */
+    border-bottom: 2px solid #a38c71; /* لون بني ترابي للخط الفاصل */
     padding-bottom: 10px;
-    color: #ffcc00;
+    color: #a38c71;
 }
 
 h1::before,
 h1::after {
     content: "•";
-    color: #ffcc00;
+    color: #a38c71;
     margin: 0 10px;
 }
 
@@ -54,40 +51,41 @@ h1::after {
 #code-input {
     padding: 12px;
     border: 1px solid #5a5a5a;
-    background-color: rgba(26, 26, 26, 0.9); /* خلفية داكنة شفافة لخانة الإدخال */
+    background-color: #3b322a; /* خلفية داكنة لخانة الإدخال */
     width: 250px;
     font-size: 1.1em;
-    font-family: 'Courier New', monospace;
+    font-family: 'Times New Roman', serif;
     text-align: center;
-    color: #f0f0f0;
+    color: #e0d5be;
 }
 
 #open-button {
     padding: 10px 25px;
-    border: 1px solid #ffcc00;
-    background-color: #cc0000; /* لون أحمر للزر */
-    color: #f0f0f0;
+    border: 1px solid #e0d5be;
+    background-color: #3b322a; /* لون زر داكن */
+    color: #e0d5be;
     cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
-    font-family: 'Courier New', monospace;
+    font-family: 'Times New Roman', serif;
     transition: background-color 0.3s;
 }
 
 #open-button:hover {
-    background-color: #e60000; /* يصبح اللون أحمر أغمق عند التمرير */
+    background-color: #e0d5be; /* يصبح لون الزر فاتحًا عند التمرير */
+    color: #3b322a; /* لون النص يصبح داكنًا عند التمرير */
 }
 
 .result-display {
     min-height: 80px;
     padding: 20px;
     margin-top: 25px;
-    background-color: rgba(26, 26, 26, 0.9); /* خلفية داكنة شفافة لعرض النتائج */
+    background-color: #3b322a; /* خلفية داكنة لعرض النتائج */
     border: 1px solid #5a5a5a;
     font-size: 1.2em;
     font-weight: normal;
     text-align: justify;
-    color: #f0f0f0;
-    border-left: 2px solid #cc0000; /* خط أحمر فاصل */
-    border-right: 2px solid #cc0000;
+    color: #e0d5be;
+    border-left: 2px solid #a38c71;
+    border-right: 2px solid #a38c71;
 }
