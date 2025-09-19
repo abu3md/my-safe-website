@@ -6,39 +6,45 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
 });
 
 const codes = {
-    '28': {
-        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-        fileName: 'q7.png',
-        type: 'image'
+    'تلميح': {
+        message: 'تفضل الصورة',
+        fileName: '1.png',
+        type: 'file',
+        fileType: 'الصورة'
     },
-    '5,891': {
+    'قبو': {
         message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-        fileName: 'q8.png',
-        type: 'file'
+        fileName: 'after_8bo.pdf',
+        type: 'file',
+        fileType: 'PDF'
     },
-    '2004': {
+    'KDXUA4BN': {
         message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-        fileName: 'q9.png',
-        type: 'file'
+        fileName: 'after_code.pdf',
+        type: 'file',
+        fileType: 'PDF'
     },
-    'RUN AWAY': {
+    'ليلى': {
         message: '**تهانينا! لقد فزت في اللعبة!**',
         type: 'win'
     },
-    'MATH': {
+    'خائن': {
         message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-        fileName: 'q10.png',
-        type: 'file'
+        fileName: 'after_5ayn.pdf',
+        type: 'file',
+        fileType: 'PDF'
     },
-    'تلميح': {
+    '12': {
         message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
-        fileName: 'q6.png',
-        type: 'file'
+        fileName: 'last.pdf',
+        type: 'file',
+        fileType: 'PDF'
     },
     'انا محاصر': {
-        message: 'تهانينا! الرمز صحيح. يمكنك تحميل الملف الآن.',
+        message: 'تم العثور على الملف:',
         fileName: 'men-on-sun.pdf',
-        type: 'file'
+        type: 'file',
+        fileType: 'PDF'
     }
 };
 
@@ -82,11 +88,12 @@ function checkCode() {
             resultDisplay.innerHTML = `${codeData.message}<br><br>الوقت الحالي هو: ${formattedTime}`;
         } else {
             const fileName = codeData.fileName;
+            const fileType = codeData.fileType;
             resultDisplay.innerHTML = `
                 ${codeData.message}
                 <br><br>
                 <a href="${fileName}" download target="_blank" style="color: #ffcc00; text-decoration: underline;">
-                    اضغط هنا لتحميل الملف
+                    اضغط هنا لتحميل ملف ${fileType}
                 </a>
             `;
         }
